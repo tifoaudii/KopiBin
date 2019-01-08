@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AUo-Ir-NV1">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--CategoriesVC-->
+        <!--KopiBin-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CategoriesVC" customModule="KopiBin" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,13 +18,96 @@
                         <viewControllerLayoutGuide type="bottom" id="Xqx-32-Ix4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coffee by Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wn8-J3-XEz">
+                                <rect key="frame" x="16" y="20" width="194" height="27"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="umz-Eu-HPl">
+                                <rect key="frame" x="0.0" y="59" width="375" height="631"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="147" id="ad3-HK-dTm" customClass="CategoryCell" customModule="KopiBin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="147"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ad3-HK-dTm" id="rcx-a0-EdL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="146.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arabica" translatesAutoresizingMaskIntoConstraints="NO" id="EFb-7c-7pq">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="146.66666666666666"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARABICA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fst-ei-C0b">
+                                                    <rect key="frame" x="142.33333333333334" y="61.333333333333343" width="90.666666666666657" height="24"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="EFb-7c-7pq" firstAttribute="leading" secondItem="rcx-a0-EdL" secondAttribute="leading" id="FT0-RA-qdK"/>
+                                                <constraint firstAttribute="bottom" secondItem="EFb-7c-7pq" secondAttribute="bottom" id="Nfk-qd-6AM"/>
+                                                <constraint firstItem="fst-ei-C0b" firstAttribute="centerY" secondItem="rcx-a0-EdL" secondAttribute="centerY" id="SXD-C6-eMp"/>
+                                                <constraint firstItem="EFb-7c-7pq" firstAttribute="top" secondItem="rcx-a0-EdL" secondAttribute="top" id="gxJ-tE-Rtw"/>
+                                                <constraint firstAttribute="trailing" secondItem="EFb-7c-7pq" secondAttribute="trailing" id="p0i-uo-QcJ"/>
+                                                <constraint firstItem="fst-ei-C0b" firstAttribute="centerX" secondItem="rcx-a0-EdL" secondAttribute="centerX" id="p3s-ph-XjN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryImage" destination="EFb-7c-7pq" id="gx9-EF-p89"/>
+                                            <outlet property="categoryLabel" destination="fst-ei-C0b" id="Yb1-gS-eIJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xqx-32-Ix4" firstAttribute="top" secondItem="umz-Eu-HPl" secondAttribute="bottom" id="2L7-Ja-swi"/>
+                            <constraint firstItem="Wn8-J3-XEz" firstAttribute="top" secondItem="A8P-oM-whU" secondAttribute="bottom" constant="20" id="8Y7-aU-RZq"/>
+                            <constraint firstItem="Wn8-J3-XEz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CjG-Ix-bTt"/>
+                            <constraint firstItem="umz-Eu-HPl" firstAttribute="top" secondItem="Wn8-J3-XEz" secondAttribute="bottom" constant="12" id="HQW-Vp-CsX"/>
+                            <constraint firstAttribute="trailing" secondItem="umz-Eu-HPl" secondAttribute="trailing" id="Vcm-zl-erw"/>
+                            <constraint firstItem="umz-Eu-HPl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ocp-fB-40w"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="KopiBin" id="VME-YB-td6"/>
+                    <connections>
+                        <outlet property="categoryTable" destination="umz-Eu-HPl" id="fVq-ee-mQd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="812" y="598"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0dV-hn-6Vw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AUo-Ir-NV1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="AdM-TP-z4m">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.25098039215686274" green="0.12156862745098039" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KPc-fn-WTx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96s-FH-nMJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1" y="598"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arabica" width="1300" height="866"/>
+    </resources>
 </document>

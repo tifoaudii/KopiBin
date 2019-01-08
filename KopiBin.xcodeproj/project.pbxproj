@@ -14,6 +14,7 @@
 		29CEADBE21E44666009117C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29CEADBD21E44666009117C9 /* Assets.xcassets */; };
 		29CEADC121E44666009117C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29CEADBF21E44666009117C9 /* LaunchScreen.storyboard */; };
 		29CEADCC21E44666009117C9 /* KopiBinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CEADCB21E44666009117C9 /* KopiBinTests.swift */; };
+		29CEADDA21E4784E009117C9 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CEADD921E4784E009117C9 /* CategoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		29CEADC721E44666009117C9 /* KopiBinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KopiBinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29CEADCB21E44666009117C9 /* KopiBinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KopiBinTests.swift; sourceTree = "<group>"; };
 		29CEADCD21E44666009117C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29CEADD921E4784E009117C9 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		29CEADB221E44664009117C9 /* KopiBin */ = {
 			isa = PBXGroup;
 			children = (
+				29CEADD821E4781E009117C9 /* View */,
 				29CEADD721E46D32009117C9 /* Controller */,
 				29CEADD621E46D2B009117C9 /* Models */,
 				29CEADB321E44664009117C9 /* AppDelegate.swift */,
@@ -113,6 +116,14 @@
 				29CEADB521E44664009117C9 /* CategoriesVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		29CEADD821E4781E009117C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				29CEADD921E4784E009117C9 /* CategoryCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +230,7 @@
 				29CEADBC21E44664009117C9 /* KopiBin.xcdatamodeld in Sources */,
 				29CEADB621E44664009117C9 /* CategoriesVC.swift in Sources */,
 				29CEADB421E44664009117C9 /* AppDelegate.swift in Sources */,
+				29CEADDA21E4784E009117C9 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
