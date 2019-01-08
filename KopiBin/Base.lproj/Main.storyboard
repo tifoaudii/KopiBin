@@ -27,22 +27,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="umz-Eu-HPl">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="umz-Eu-HPl">
                                 <rect key="frame" x="0.0" y="59" width="375" height="631"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="147" id="ad3-HK-dTm" customClass="CategoryCell" customModule="KopiBin" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="147"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="150" id="ad3-HK-dTm" customClass="CategoryCell" customModule="KopiBin" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ad3-HK-dTm" id="rcx-a0-EdL">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="146.66666666666666"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ad3-HK-dTm" id="rcx-a0-EdL">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arabica" translatesAutoresizingMaskIntoConstraints="NO" id="EFb-7c-7pq">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="146.66666666666666"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="150" id="XLa-Pb-TCm"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARABICA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fst-ei-C0b">
-                                                    <rect key="frame" x="142.33333333333334" y="61.333333333333343" width="90.666666666666657" height="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ARABICA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fst-ei-C0b">
+                                                    <rect key="frame" x="142.33333333333334" y="63" width="90.666666666666657" height="24"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -50,7 +53,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="EFb-7c-7pq" firstAttribute="leading" secondItem="rcx-a0-EdL" secondAttribute="leading" id="FT0-RA-qdK"/>
-                                                <constraint firstAttribute="bottom" secondItem="EFb-7c-7pq" secondAttribute="bottom" id="Nfk-qd-6AM"/>
+                                                <constraint firstAttribute="bottom" secondItem="EFb-7c-7pq" secondAttribute="bottom" constant="5" id="Nfk-qd-6AM"/>
                                                 <constraint firstItem="fst-ei-C0b" firstAttribute="centerY" secondItem="rcx-a0-EdL" secondAttribute="centerY" id="SXD-C6-eMp"/>
                                                 <constraint firstItem="EFb-7c-7pq" firstAttribute="top" secondItem="rcx-a0-EdL" secondAttribute="top" id="gxJ-tE-Rtw"/>
                                                 <constraint firstAttribute="trailing" secondItem="EFb-7c-7pq" secondAttribute="trailing" id="p0i-uo-QcJ"/>
