@@ -12,7 +12,6 @@ class CategoriesVC: UIViewController, UITableViewDataSource ,UITableViewDelegate
     
     @IBOutlet weak var categoryTable: UITableView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,6 +33,18 @@ class CategoriesVC: UIViewController, UITableViewDataSource ,UITableViewDelegate
         return CategoryCell()
     }
     
+    //selected one cell
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //grab the appropriate category
+        let category = DataService.instance.getCategory()[indexPath.row]
+        performSegue(withIdentifier: "listcoffee", sender: category)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let productsVC = segue.destination as? ProductsVC {
+            productsVC.initProducts(category: sender as! Category)
+        }
+    }
 
 }
 
